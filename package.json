@@ -1,0 +1,49 @@
+{
+  "name": "trans-not",
+  "version": "1.0.0",
+  "description": "Notify the latest transactions being made a blockchain address",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "nodemon -e ts -w ./ -x npm run build:dev",
+    "lint": "eslint . --ext .ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:dev": "ts-node --project ./tsconfig.json ./src/index.ts",
+    "build:prod": "rm -rf dist && tsc",
+    "prepare": "npm run build:prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mohamadtgh/trans-not.git"
+  },
+  "keywords": [
+    "tron",
+    "blockchain",
+    "transaction",
+    "notify",
+    "tronscan"
+  ],
+  "author": {
+    "name": "Mohamad Taghizadeh",
+    "email": "mtmohamad5@gmail.com",
+    "url": "https://github.com/mohamadtgh"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mohamadtgh/trans-not/issues"
+  },
+  "homepage": "https://github.com/mohamadtgh/trans-not#readme",
+  "devDependencies": {
+    "@types/node-cron": "3.0.11",
+    "nodemon": "3.1.0",
+    "ts-node": "10.9.2",
+    "tslib": "2.6.2",
+    "typescript": "5.4.3"
+  },
+  "dependencies": {
+    "node-cron": "3.0.3"
+  }
+}

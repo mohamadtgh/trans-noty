@@ -1,0 +1,20 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "outDir": "./dist",
+    "target": "ES6",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "strict": true,
+    "experimentalDecorators": true,
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "strictPropertyInitialization": false,
+    "sourceMap": false,
+    "declaration": true,
+    "declarationMap": true,
+    "noResolve": false
+  },
+  "exclude": ["node_modules"]
+}
