@@ -1,6 +1,6 @@
 {
   "name": "trans-not",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Notify the latest transactions being made a blockchain address",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
