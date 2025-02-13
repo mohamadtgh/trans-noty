@@ -51,7 +51,7 @@ export default class TrxWatcher {
   public notifyLastConfirmedTransaction(notifyCallback: (transactions: TrxTransaction[]) => void): void {
     Logger.info("Monitoring confirmed transactions ...");
     this.resetRecentTransaction();
-    cron.schedule("*/5 * * * * *", async () => {
+    cron.schedule(this.options.intervalCronSyntax?? DEFAULT_INTERVAL_CRONSYNTAX, async () => {
       const taskTimestamp = this.registerTaskTimestamp();
       Logger.info("checking for transactions ", taskTimestamp);
       const newTransactions = await this.getNewConfirmedTransactions(this.options.transactionLimit);
